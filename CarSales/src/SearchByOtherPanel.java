@@ -10,13 +10,13 @@ public class SearchByOtherPanel extends JPanel implements ActionListener
 	private Car[] carList;
 	private CarSalesSystem carSystem;
 	private int currentIndex = 0;
-	private JLabel headingLabel = new JLabel("Търсене по цена и изминато разстояние");
-	private JLabel priceLabel = new JLabel("Цена");
-	private JLabel distanceLabel = new JLabel("Изминато разстояние");
-	private JButton searchButton = new JButton("Търсене");
-	private JButton resetButton = new JButton("Изчисти");
-	private JButton previousButton = new JButton("Назад");
-	private JButton nextButton = new JButton("Напред");
+	private JLabel headingLabel = new JLabel("РўСЉСЂСЃРµРЅРµ РїРѕ С†РµРЅР° Рё РёР·РјРёРЅР°С‚Рѕ СЂР°Р·СЃС‚РѕСЏРЅРёРµ");
+	private JLabel priceLabel = new JLabel("Р¦РµРЅР°(Р»РІ.)");
+	private JLabel distanceLabel = new JLabel("РР·РјРёРЅР°С‚Рѕ СЂР°Р·СЃС‚РѕСЏРЅРёРµ(РєРј.)");
+	private JButton searchButton = new JButton("РўСЉСЂСЃРµРЅРµ");
+	private JButton resetButton = new JButton("РР·С‡РёСЃС‚Рё");
+	private JButton previousButton = new JButton("РќР°Р·Р°Рґ");
+	private JButton nextButton = new JButton("РќР°РїСЂРµРґ");
 	private JComboBox priceCombo = new JComboBox(price);
 	private JComboBox distanceCombo = new JComboBox(distance);
 	private JPanel topPanel = new JPanel();
@@ -86,7 +86,7 @@ public class SearchByOtherPanel extends JPanel implements ActionListener
 			carComponents.displayDetails(carList[currentIndex]);
 		}
 		else
-			JOptionPane.showMessageDialog(carSystem, "Не можете да продължите", "Грешка", JOptionPane.ERROR_MESSAGE);
+			JOptionPane.showMessageDialog(carSystem, "РќРµ РјРѕР¶РµС‚Рµ РґР° РїСЂРѕРґСЉР»Р¶РёС‚Рµ", "Р“СЂРµС€РєР°", JOptionPane.ERROR_MESSAGE);
 	}
 
 	
@@ -98,7 +98,7 @@ public class SearchByOtherPanel extends JPanel implements ActionListener
 			carComponents.displayDetails(carList[currentIndex]);
 		}
 		else
-			JOptionPane.showMessageDialog(carSystem, "Не можете да продължите", "Грешка", JOptionPane.ERROR_MESSAGE);
+			JOptionPane.showMessageDialog(carSystem, "РќРµ РјРѕР¶РµС‚Рµ РґР° РїСЂРѕРґСЉР»Р¶РёС‚Рµ", "Р“СЂРµС€РєР°", JOptionPane.ERROR_MESSAGE);
 	}
 
 	
@@ -142,6 +142,6 @@ public class SearchByOtherPanel extends JPanel implements ActionListener
 			carSystem.repaint();
 		}
 		else
-			JOptionPane.showMessageDialog(carSystem, "Няма намерени резултати", "Грешка", JOptionPane.WARNING_MESSAGE);
+			JOptionPane.showMessageDialog(carSystem, "РќСЏРјР° РЅР°РјРµСЂРµРЅРё СЂРµР·СѓР»С‚Р°С‚Рё", "Р“СЂРµС€РєР°", JOptionPane.WARNING_MESSAGE);
 	}
 }
